@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+</head>
+<body>
+    <input type="button" value="按钮" />
+    <div></div>
+<script>
+// $(document).ready($(function(){
+//     $("input").bind('click ',fn);
+//     function fn(){
+//         alert("弹唱")
+//     }
+// }));
+
+// $(function() {
+
+//     $("input").bind("mouseout mouseover",function(){
+//           $("div").html(function(index,value){
+//               return value + "1";
+
+//           })
+
+//     })
+// })
+$(function() {
+    $("input").bind({
+        'mouseover':function(){
+            $("div").html(function(index, value){
+                return value +"1";
+            })
+        },
+        'mouseout':function(){
+        $("div").html(function(index, value){
+            return value +"2";
+        })
+
+        }
+
+    })
+})
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>
