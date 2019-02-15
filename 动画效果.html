@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画效果</title>
+</head>
+<body>
+        <input  type="button"  class="show"  value="显示"/>
+        <input  type="button"  class="hide" value="隐藏"/>
+        <div id="box" style="width:200px;height:200px;background:red"  >
+
+<script>
+// $(function(){
+//     $('.show').click(function(){
+//         $('#box').show();
+//     });
+//     $('.hide').click(function(){
+//         $('#box').hide();
+//     });
+// })
+
+// $(function(){
+//     $('.show').click(function(){
+//         $('#box').show(1000);
+//     });
+//     $('.hide').click(function(){
+//         $('#box').hide(1000);
+//     });
+// })
+
+//默认400毫秒
+// $(function(){
+//     $('.show').click(function(){
+//         $('#box').show('fast');
+//     });
+//     $('.hide').click(function(){
+//         $('#box').hide('slow');
+//     });
+// })
+
+
+$(function(){
+    $('.show').click(function(){
+        $('#box').show('slow',function(){
+            alert("显示完毕")
+        });
+    });
+    $('.hide').click(function(){
+        $('#box').hide('slow');
+    });
+})
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
