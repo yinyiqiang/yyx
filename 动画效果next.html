@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        background: red;
+        height:100px;
+        width: 100px;
+    }
+</style>
+<body>
+        <input  type="button"  class="up"  value="上"/>
+        <input  type="button"  class="down" value="下"/>
+        <input type="button"   class="out" value="淡出"/>
+        <input type="button"   class="in" value="淡入"/>
+        <input type="button"   class="toggle" value="切换"/>
+        <input type="button"   class="to" value="透明度"/>
+        <div id="box">box</div>
+ <script >
+     $(function(){
+        // $('.toggle').click(function(){
+        //     $('#box').toggle('slow');
+        // });
+        // $('.up').click(function(){
+        //     $('#box').slideUp('slow');
+        // });
+        // $('.down').click(function(){
+        //     $('#box').slideDown();
+        // });
+
+        // $('.toggle').click(function(){
+        //     $('#box').slideToggle();
+        // });
+
+        $('.out').click(function(){
+            $('#box').fadeOut('slow');
+        });
+        $('.in').click(function(){
+            $('#box').fadeIn('slow');
+        });
+        $('.toggle').click(function(){
+            $('#box').fadeToggle('slow');
+        });
+        $('.to').click(function(){
+            $('#box').fadeTo('slow',0.33);
+        });
+
+     })
+        
+</script>
+</body>
+</html>
