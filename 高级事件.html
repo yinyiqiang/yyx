@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div id="box" style="width:200px;height:200px;background:green">
+<input  type="button"  value="按钮"/>
+</div>
+<script>
+// $(function(){
+//     $("input").click(function(e,data,data1){
+//         if(data) {
+//             alert("模拟实践"+data+data1);
+//         } else {
+//             alert("dsadas");
+//         }
+//     });
+//     $("input").trigger('click',["123","abc"]);
+// })
+
+// $(function(){
+//     $("input").bind("myEvent",fn).trigger('myEvent');
+//    function fn(){
+//        alert("我的第一事件")
+//    }
+// })
+// $(function(){
+//     $("input").bind('click.abc',fn);
+//     function fn(){
+//         alert("abc")
+//     };
+//     $("input").bind('click.xyz',fn);
+//     function fn(){
+//         alert("xyz")
+//     };
+//     $("input").unbind('click.abc');
+// })
+//    $(function(){
+//        $("input").on("click",function(){
+//            alert("替代bind")
+//        })
+//        })
+
+// $(function(){
+//     $("input").on('click',{user:'lee'},function(e){
+//         alert('替代bind()'+e.data.user);
+//     });
+// })
+
+//替代bind（）方式，并使用额外数据和事务对象
+// $(function(){
+//     $("input").on('mouseover mouseout',function(e){
+//         alert('替代bind()移入移出！');
+//     });
+// })
+// $(function(){
+//     $("input").on({
+//         mouseover:function(){
+//             alert("移入");
+//         },
+//         mouseout:function(){
+//             alert("移出");
+//         }
+//     })
+// })
+
+// $(function(){
+//     $("form").on('submit',function(){
+//         return false;
+//     })
+// })
+
+// $(function(){
+//     $("form").on('submit',false)
+// })
+
+// $(function(){
+//     $('#box').on('click','input',function(){
+//         $(this).clone().appendTo('#box');
+//     });
+//      $('input').off('click');
+// })
+
+
+
+// $(function(){
+//     $('#box').on('click','input',function(){
+//         $('this').clone().appendTo('#box');
+//     });
+//      $('#box').off('click','input');
+// })
+
+//仅以此事件触发
+// $(function(){
+//     $('input').one('click',function(){
+//         alert("仅一次事件触发");
+//     });
+// })
+
+// $(function(){
+//     $('input').one('click',function(){
+//         alert("仅一次事件触发");
+//     });
+// })
+
+// $(function(){
+//     $('#box').one('click','input',function(){
+//         $(this).clone().appendTo('#box');
+//     });
+     
+// })
+
+
+
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>
