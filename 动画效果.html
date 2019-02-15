@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+        <link  rel="stylesheet"  type="text/css"   href="demo.css" >
     <script src="jquery.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +10,13 @@
     <title>动画效果</title>
 </head>
 <body>
+    <div class="test">你</div> 
+    <div class="test">好</div> 
+    <div class="test">吗</div> 
+    <div class="test">？</div> 
         <input  type="button"  class="show"  value="显示"/>
         <input  type="button"  class="hide" value="隐藏"/>
-        <div id="box" style="width:200px;height:200px;background:red"  >
-
+        
 <script>
 // $(function(){
 //     $('.show').click(function(){
@@ -42,20 +47,43 @@
 // })
 
 
+// $(function(){
+//     $('.show').click(function(){
+//         $('#box').show('slow',function(){
+//             alert("显示完毕")
+//         });
+//     });
+//     $('.hide').click(function(){
+//         $('#box').hide('slow');
+//     });
+// })
+
+//列队动画
+// $(function(){
+//     $('.show').click(function(){
+//         $('.test').eq(0).show('fast',function(){
+//             $('.test').eq(1).show('fast',function(){
+//                 $('.test').eq(2).show('fast',function(){
+//                     $('.test').eq(3).show('fast')
+//                 })
+//             })
+//         })
+//     })
+// })
+
+//列队动画，递归自调用
 $(function(){
     $('.show').click(function(){
-        $('#box').show('slow',function(){
-            alert("显示完毕")
-        });
+        $('.test').first().show('fast',function testShow(){
+            $(this).next().show('fast',testShow);
+        })
     });
     $('.hide').click(function(){
-        $('#box').hide('slow');
-    });
+        $('.test').last().hide('fast',function testHide(){
+            $(this).prev().hide('fast',testHide);
+        })
+    })
 })
-
-
-
-
 
 
 
