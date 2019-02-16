@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+        }
+        .pox{
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            top:150px;
+        }
+</style>
+<body>
+    <input  type="button" class="button" value="运动"/>
+    <input  type="button" class="stop" value="停止"/>
+    <input  type="button" class="ani" value="查找运动的"/>
+    <div class="box">box</div>
+    <div class="pox">pox</div>
+    <script>
+    $(function(){
+        // $.fx.off=true;//关闭动画
+        // $.fx.interval=200;//全局
+        // $('.button').click(function(){
+        //     $('.box').toggle(1000);
+        // });
+         
+         $('.button').click(function(){
+             $('.box').animate({left:'800px'},3000,'swing');//反冲运动
+             $('.pox').animate({left:'800px'},3000,'linear');//匀速运动
+         })
+
+
+    })
+    
+    
+    </script>
+</body>
+</html>
