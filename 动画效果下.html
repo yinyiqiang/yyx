@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+        }
+        .pox{
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            top:150px;
+        }
+</style>
+<body>
+    <input  type="button" class="button" value="运动"/>
+    <input  type="button" class="stop" value="停止"/>
+    <input  type="button" class="ani" value="查找运动的"/>
+    <div class="box">box</div>
+    <div class="pox">pox</div>
+    <script>
+    $(function(){
+        // $('.button').click(function(){
+        //     $('.box').animate({left:'300px'},1000)
+        //              .animate({bottom:'300px'},1000)
+        //              .animate({width:'300px'},1000)
+        //              .animate({height:'300px'},1000)
+        // });
+        // $('.stop').click(function(){
+        //     $('.box').stop(true,true);
+        // });
+        // 第一个参数，如果为true，就是停止并且清除后面的列队动画，动画完全停止默认值为false
+        // 第二个参数，如果为true，停止后会跳转到末尾的位置上。默认值为false
+
+
+        // $('.button').click(function(){
+        //     $('.box').delay(1000)
+        //              .animate({left:'300px'})
+        //              .animate({bottom:'300px'}).delay(2000)
+        //              .animate({width:'300px'})
+        //              .animate({height:'300px'})
+        // });
+        
+            $('.box').slideToggle('slow',function(){
+                $(this).slideToggle('slow',arguments.callee)
+            });
+            $('.ani').click(function(){
+                $(':animated').stop().css('background','blue');
+            });
+
+
+    })
+    
+    
+    </script>
+</body>
+</html>
