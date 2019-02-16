@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    height:100px;
+    width: 100px;
+    background: red;
+}
+
+</style>
+<body>
+    <input type="button"  class="button"  value="按钮"/>    
+    <div class="box">box</div>
+
+    <script>
+        //列队动画
+    $(function(){
+        // $('.button').click(function(){
+        //     $('.box').animate({width:'300px'})
+        //              .animate({height:'200px'}) 
+        //              .animate({opacity:0.5}) 
+        //              .animate({fontSize:'50px'})                  
+        // });
+            $('.button').click(function(){
+                $('.box').slideUp('slow')
+                        .slideDown('slow',function(){alert(Count())})
+                        .queue(function(next){
+                            $(this).css('background','orange') ;
+                            next();
+                        }).hide('slow');
+            })
+            function Count(){
+            return $('.box').queue('fx').length;
+        }
+        })
+       
+    
+    </script>
+</body>
+</html>
