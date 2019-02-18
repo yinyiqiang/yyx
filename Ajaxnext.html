@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input class="button" type="button" value="异步加载数据"/>
+ <div class="div1"></div>   
+
+<script>
+$(function(){
+    $(".button").click(function(){
+    $(".div1").load("test.txt",function(responseTxt,statusTxt,xhr){
+      if(statusTxt=="success")
+        alert("外部内容加载成功！");
+      if(statusTxt=="error")
+        alert("Error: "+xhr.status+": "+xhr.statusText);
+    });
+  });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
