@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../jquery.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="显示" class="animate">
+    <div class="box"></div>
+    <script>
+        $(function() {
+            $('.animate').click(function() {
+                $('.box').animate({
+                    height: '+=100px',
+                    width: '+=100px',
+                    opacity: '0.1'
+                },'fast'); 
+            });
+        })
+    </script>
+</body>
+</html>

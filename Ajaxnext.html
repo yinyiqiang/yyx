@@ -13,12 +13,18 @@
 
 <script>
 $(function(){
-    $(".button").click(function(){
-    $(".div1").load("test.txt",function(responseTxt,statusTxt,xhr){
-      if(statusTxt=="success")
-        alert("外部内容加载成功！");
-      if(statusTxt=="error")
-        alert("Error: "+xhr.status+": "+xhr.statusText);
+  $(".button").click(function(){
+    $.ajax({
+      url: './ajaxdata.json',
+      dataType: 'json',
+      type: 'get',
+      success: function(data) {
+        console.log(data);
+        $('.div1').html('<span>' + data.username + data.age + data.gender + '</span>');
+      },
+      fail: function(err) {
+        console.log(err);
+      }
     });
   });
 })
