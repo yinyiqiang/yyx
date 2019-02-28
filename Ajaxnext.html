@@ -15,12 +15,14 @@
 $(function(){
   $(".button").click(function(){
     $.ajax({
-      url: './ajaxdata.json',
+      url: 'ajaxdata.json',
       dataType: 'json',
       type: 'get',
+      
       success: function(data) {
         console.log(data);
         $('.div1').html('<span>' + data.username + data.age + data.gender + '</span>');
+       
       },
       fail: function(err) {
         console.log(err);
@@ -28,10 +30,6 @@ $(function(){
     });
   });
 })
-
-
-
-
 
 
 

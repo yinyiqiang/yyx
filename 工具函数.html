@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工具函数</title>
+</head>
+<body>
+    <div class="box"></div>
+<script>
+$(function(){
+    // var str='                jQuery    ';
+    // alert(str);
+    // alert($.strim(str));
+    var arr=['张三','李四','王五'];
+    $.each(arr,function(index,value){
+        $('.box').html($('.box').html()+(index+1)+'.'+value+'<br/>');
+    })
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

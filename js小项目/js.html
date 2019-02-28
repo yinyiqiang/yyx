@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>记住</title>
+    <script src="../jquery.js"></script>
+    <style>
+   body,input{
+       margin:0;
+       padding:0;
+    }
+   body{
+       font:12px/1.5 Tahoma;
+    }
+   .main{
+      
+        width:200px;
+        margin:0 auto;
+        padding:5px;
+    } 
+   input{
+       margin-right:5px;
+       vertical-align:middle;
+    }
+    .label {
+        position: relative;
+        text-align: center;
+    }
+  .div1{
+        position: absolute;
+        padding: 5px;
+        background: #ffefa4;
+        border: 1px solid #f90;
+        display: block;
+        left: 50%;
+        width: 300px;
+        margin-left: -150px;
+        display: none;
+        /* transform: translateX(-50%); */
+    }
+   
+    
+    
+    
+    </style>
+</head>
+<body>
+   <div class="main">
+       <div class="label">
+             <label><input type="checkbox">两周内自动登入</label>
+            <div class="div1">为了你的信息安全，请不要在网吧或公用电脑上使用此功能</div>
+       </div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+        <div><label class=""><input type="checkbox">两周内自动登入</label></div>
+   </div>
+   <script>
+       $(function(){
+           $('.label').on({
+               'mouseover' : function(){
+                    $('.div1').show();
+               },
+               'mouseout' : function(){
+                    $('.div1').hide();
+               }
+           })
+       })
+       
+   
+   </script>
+</body>
+</html>

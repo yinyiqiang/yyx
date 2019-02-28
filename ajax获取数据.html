@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input  type="button"  value="异步加载数据"/>
+    <div class="box"></div>
+    <script>
+        $(function(){
+            $('input').click(function(){
+             //    $.get('test.xml',function(response,status,xhr){
+             //        alert($(response).find('root').find('url').text());
+             //    })
+             // $.get('yewu.json',function(response,status,xhr){
+             //     alert(response[0].sex);
+             // })
+             // $.get('yewu.json',function(response,status,xhr){
+             //     $('.box').html(response)
+             //     },'html')
+             $.getJSON('yewu.json',function(response,status,xhr){
+                 alert(response[0].username);
+              })//保密性强
+     
+            
+     
+     
+     
+            })
+         })
+    
+    
+    
+    </script>
+    
+</body>
+</html>
